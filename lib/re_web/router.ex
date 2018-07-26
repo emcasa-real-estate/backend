@@ -14,6 +14,10 @@ defmodule ReWeb.Router do
     plug(:accepts, ["json"])
   end
 
+  scope "/test" do
+    forward("/", TestPlug)
+  end
+
   scope "/", ReWeb do
     pipe_through(:api)
 

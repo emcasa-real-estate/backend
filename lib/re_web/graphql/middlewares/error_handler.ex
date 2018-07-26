@@ -5,7 +5,7 @@ defmodule ReWeb.GraphQL.Middlewares.ErrorHandler do
   @behaviour Absinthe.Middleware
 
   def call(resolution, _arg) do
-    %{resolution | errors: Enum.reduce(resolution.errors, [], &handle_error/2)}
+    %{resolution | errors: [%{message: "Unauthorized", code: 401}]}
   end
 
   defp handle_error(:not_found, errors), do: [%{message: "Not found", code: 404} | errors]
