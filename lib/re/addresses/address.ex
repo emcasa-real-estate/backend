@@ -25,10 +25,12 @@ defmodule Re.Address do
 
     has_many :listings, Re.Listing
 
+    belongs_to :district, Re.Addresses.District
+
     timestamps()
   end
 
-  @required ~w(street street_number neighborhood city state postal_code lat lng)a
+  @required ~w(street street_number neighborhood city state postal_code lat lng district_id)a
 
   @sluggified_attr ~w(state city neighborhood street)a
 
