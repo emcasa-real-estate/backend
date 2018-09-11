@@ -28,8 +28,8 @@ config :re, ReWeb.Guardian,
 # Configure your database
 config :re, Re.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("POSTGRES_USER") || "postgres",
+  password: System.get_env("POSTGRES_PASSWORD") || "postgres",
   database: "re_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
