@@ -27,7 +27,7 @@ test:
     - DATABASE_POSTGRESQL_USERNAME=postgres
     - DATABASE_POSTGRESQL_PASSWORD=postgres
   volumes_from:
-    - web
+    - api
   links:
     - postgres
 
