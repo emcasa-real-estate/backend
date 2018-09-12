@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/emcasa/backend.svg?branch=master)](https://travis-ci.org/emcasa/backend)
+[![Travis Build Status](https://travis-ci.org/emcasa/backend.svg?branch=master)](https://travis-ci.org/emcasa/backend)
+[![Semaphore Build Status](https://semaphoreci.com/api/v1/emcasa/backend/branches/master/badge.svg)](https://semaphoreci.com/emcasa/backend)
 [![Ebert](https://ebertapp.io/github/emcasa/backend.svg)](https://ebertapp.io/github/emcasa/backend)
 [![Coverage Status](https://coveralls.io/repos/github/emcasa/backend/badge.svg)](https://coveralls.io/github/emcasa/backend)
 [![codebeat badge](https://codebeat.co/badges/eaf3bdc4-572b-4c84-8a93-347850ca530c)](https://codebeat.co/projects/github-com-emcasa-backend-master)
@@ -23,6 +24,13 @@
   * Start Phoenix endpoint with `mix phx.server`
   * Check `http://localhost:4000/listings`
   * WebSocket subscriptions at `ws://localhost:4000/socket`
+
+## Docker
+
+  * Create (for now empty) env file: `touch .env`
+  * Build image: `docker-compose up -d api`
+  * Setup project: `docker-compose run api mix do deps.get, compile, ecto.setup`
+  * Restart: `docker-compose restart api`
 
 ## Production
 
