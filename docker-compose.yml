@@ -17,7 +17,7 @@ api:
     - postgres
 
 test:
-  image: phoenixbootstrap_web
+  image: backend_api
   env_file: .env
   command: mix test
   environment:
